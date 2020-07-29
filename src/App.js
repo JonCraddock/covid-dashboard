@@ -4,6 +4,7 @@ import {
   Select,
   MenuItem
 } from "@material-ui/core";
+import InfoBox from './InfoBox';
 import './App.css'; 
 
 function App() {
@@ -51,14 +52,14 @@ function App() {
           </Select>
         </FormControl>
       </div>
+      <div className="app__stats">
+        <InfoBox title="Coronavirus Cases" cases={123} total={2000}  />
 
+        <InfoBox title="Recovered" cases={1234} total={1780} />
 
-      {/* Header */}
-      {/* Title + Select input dropdown field */}
+        <InfoBox title="Deaths" cases={12345} total={32} />
+      </div>
 
-      {/* Infobox */}
-      {/* Infobox */}
-      {/* InfoBox */}
 
       {/* Table */}
       {/* Graph */}
