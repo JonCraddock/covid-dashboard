@@ -9,6 +9,7 @@ import {
 import InfoBox from './InfoBox';
 import Map from "./Map";
 import Table from "./Table";
+import LineGraph from "./LineGraph";
 import './Table.css';
 import './App.css'; 
 import { sortData } from './util.js';
@@ -59,8 +60,6 @@ function App() {
     
   };
 
-  console.log(countryInfo);
-
   return (
     <div className="app">
       <div className="app__left">
@@ -91,10 +90,11 @@ function App() {
 
       <Card className="app__right">
         <CardContent>
-          <h3> Live cases by Country</h3>
+          <h3> Live Cases by Country</h3>
           <Table countries={tableData} />
+
           <h3>Worldwid new cases</h3>
-          {/* Graph */}
+          <LineGraph />
         </CardContent>
       </Card>
     </div>
