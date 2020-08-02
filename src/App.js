@@ -69,7 +69,7 @@ function App() {
         <div className="app__header">
           <h1>COVID-19 Tracker</h1>
           <FormControl className="app__dropdown">
-            <Select variant="outlined" value="abc" value={country} onChange={onCountryChange} >
+            <Select variant="outlined" value={country} onChange={onCountryChange} >
               <MenuItem value="worldwide">Worldwide</MenuItem>
               {
                 countries.map(country =>(
@@ -112,8 +112,8 @@ function App() {
           <h3> Live Cases by Country</h3>
           <Table countries={tableData} />
 
-          <h3>Worldwid new {casesType}</h3>
-          <LineGraph  casesType={casesType} />
+          <h3 className="app__graphTitle">Worldwid new {casesType}</h3>
+          <LineGraph className="app__graph" casesType={casesType} />
         </CardContent>
       </Card>
     </div>
